@@ -1,16 +1,42 @@
-# React + Vite
+# Chris Ridley Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Vite-powered React site needs to be served through Vite so the JSX and npm dependencies can be bundled. Opening `index.html` directly in a browser will show a blank page because the browser cannot resolve imports like `src/main.jsx` or your node_modules.
 
-Currently, two official plugins are available:
+## Run the site locally
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the dev server (includes hot reload):
+   ```bash
+   npm run dev
+   ```
+3. Open the URL shown in the terminal (usually http://localhost:5173).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Build for static hosting
+1. Create the production bundle:
+   ```bash
+   npm run build
+   ```
+2. Preview the built files locally:
+   ```bash
+   npm run preview
+   ```
+   This serves the `dist/` output so you can verify it before uploading to your host.
 
-## React Compiler
+If you plan to host the site without running the Vite dev server, deploy the contents of `dist/` after running the build step.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Deploy to GitHub Pages
+Vite builds a fully static bundle in `dist/`, which you can serve directly from GitHub Pages. The current Vite config sets `base: './'` so assets load correctly from a project page (e.g., `https://<username>.github.io/<repo>/`).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Build the site:
+   ```bash
+   npm run build
+   ```
+2. Push the `dist/` output to a `gh-pages` branch:
+   ```bash
+   git subtree push --prefix dist origin gh-pages
+   ```
+   (If the branch already exists, add `--force`.)
+3. In your repository settings on GitHub, enable Pages and set the source to the `gh-pages` branch.
+4. Once published, visit the GitHub Pages URL. A blank page usually means the assets could not be found; double-check that the `base` path matches your repo name or keep it as `./` for relative asset URLs.
