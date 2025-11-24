@@ -1,14 +1,368 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>y</title>
-    <script type="module" crossorigin src="/Chris-Ridley-Portfolio/assets/index-qoquBDah.js"></script>
-    <link rel="stylesheet" crossorigin href="/Chris-Ridley-Portfolio/assets/index-gmo_qiAv.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Ridley | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-gremlin">
+  <div class="bg-blobs">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <div class="noise-overlay"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">CR</span>
+        <span class="logo-text">Chris Ridley</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#fun">Fun Zone</a>
+        <a href="#contact" class="nav-cta">Hire me</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="mode-toggle" id="modeToggle" aria-label="Toggle serious mode">
+          🎭
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">✨ Developer · Game dev · Digital arts goblin</p>
+          <h1 id="hero-title">
+            Hi, I’m <span class="hero-name">Chris</span> — I build
+            <span class="hero-highlight">playful digital worlds</span>.
+          </h1>
+          <p class="hero-sub">
+            Websites, apps, games, and other mildly chaotic experiments.
+            I like making things that look cool and actually work.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary">See my work 🚀</a>
+            <a href="#contact" class="btn ghost">Let’s talk 💬</a>
+          </div>
+
+          <div class="hero-chips">
+            <span class="chip">Unity & C#</span>
+            <span class="chip">Web dev</span>
+            <span class="chip">Game design</span>
+            <span class="chip">Blender / Animation</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-orbit">
+            <div class="avatar-circle">
+              <div class="avatar-face">
+                <span class="face-eyes" id="eyes">◕ ◕</span>
+                <span class="face-mouth">ᴖ</span>
+              </div>
+            </div>
+            <div class="orbit-badge orbit-1">Dev 💻</div>
+            <div class="orbit-badge orbit-2">Games 🎮</div>
+            <div class="orbit-badge orbit-3">Art 🎨</div>
+          </div>
+          <p class="hero-caption">
+            This is my mascot. It stares at your cursor and silently judges your CSS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <p class="section-kicker">Who dis?</p>
+        <h2>About me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main">
+          <p>
+            I’m Chris, a digital arts & game dev human who likes building
+            interactive things that feel good to use. I juggle
+            <span class="inline-pill">Unity projects</span>,
+            <span class="inline-pill">websites</span>,
+            and <span class="inline-pill">creative experiments</span>
+            like it’s totally normal.
+          </p>
+          <p>
+            My happy place: combining strong technical foundations with playful,
+            slightly unhinged ideas — while still keeping everything performant,
+            responsive, and ship-able.
+          </p>
+          <p>
+            Current quests: leveling up game networking, building polished
+            portfolio pieces, and slowly turning into a functional adult.
+          </p>
+        </div>
+
+        <ul class="about-facts">
+          <li>🎓 Digital Arts student & game dev</li>
+          <li>🕹 Loves prototyping weird mechanics</li>
+          <li>📷 Into photography & video, especially cars</li>
+          <li>💡 Obsessed with learning new tools & pipelines</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <p class="section-kicker">Toolkit</p>
+        <h2>Skills & superpowers</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Game dev 🎮</h3>
+          <p>Unity, C#, 2D/3D prototyping, gameplay systems, UI, particles.</p>
+          <ul>
+            <li>Player controllers & feel</li>
+            <li>Juice / feedback</li>
+            <li>Basic multiplayer & networking</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Web & apps 🌐</h3>
+          <p>Responsive sites & app prototypes with clean, readable code.</p>
+          <ul>
+            <li>HTML/CSS/JS</li>
+            <li>React / modern front-end basics</li>
+            <li>UI layout & design thinking</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Art & animation 🎨</h3>
+          <p>Stylised visuals with personality and clear readability.</p>
+          <ul>
+            <li>Blender (3D & 2D)</li>
+            <li>Concept & moodboards</li>
+            <li>Motion & camera work</li>
+          </ul>
+        </div>
+
+        <div class="skill-card skill-card-fun">
+          <h3>Soft skills 🧠</h3>
+          <p>Apparently, humans like these too.</p>
+          <ul>
+            <li>Explaining complex stuff simply</li>
+            <li>Team collaboration & feedback</li>
+            <li>Breaking things, then fixing them</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <p class="section-kicker">Show & tell</p>
+        <h2>Selected projects</h2>
+        <p class="section-sub">
+          Real projects I’ve worked on. You can swap these with your own links, repos, and builds.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-tag">Game · Unity</span>
+            <span class="project-pill">Multiplayer</span>
+          </div>
+          <h3>Respawn-ish Arena Shooter</h3>
+          <p>
+            Isometric arena shooter prototype with custom player controller,
+            weapons, and networking. Focus on game feel, feedback, and clean
+            match flow.
+          </p>
+          <ul class="project-highlights">
+            <li>Custom health & damage system</li>
+            <li>Juicy shooting, hit feedback, and VFX</li>
+            <li>Server-authoritative networking experimentation</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">Gameplay video (soon) ▶</a>
+            <a href="#" target="_blank" rel="noreferrer">GitHub repo 🧪</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-tag">Web · Portfolio</span>
+            <span class="project-pill">Frontend</span>
+          </div>
+          <h3>Ridley Media Landing Page</h3>
+          <p>
+            A playful, scroll-based landing page for my creative services:
+            websites, apps, and video. Built mobile-first and tuned for
+            performance.
+          </p>
+          <ul class="project-highlights">
+            <li>Responsive layout with clean typography</li>
+            <li>Custom components without heavy frameworks</li>
+            <li>Easy to extend with case studies & galleries</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">Live site 🌍</a>
+            <a href="#" target="_blank" rel="noreferrer">Source on GitHub 🧷</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-tag-row">
+            <span class="project-tag">Game · Prototype</span>
+            <span class="project-pill">Design</span>
+          </div>
+          <h3>Jetpack Runner Clone</h3>
+          <p>
+            My take on an endless runner with tight flight controls, hazards,
+            and procedural level generation inspired by Jetpack Joyride.
+          </p>
+          <ul class="project-highlights">
+            <li>Custom physics-based jetpack controller</li>
+            <li>Modular hazard & obstacle system</li>
+            <li>Editor tools for quickly iterating on levels</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">Play build 🎮</a>
+            <a href="#" target="_blank" rel="noreferrer">Design doc 📄</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUN ZONE -->
+    <section class="section section-fun" id="fun">
+      <div class="section-header">
+        <p class="section-kicker">Brain snacks</p>
+        <h2>The fun zone</h2>
+        <p class="section-sub">
+          A tiny corner for completely unnecessary, but very important, nonsense.
+        </p>
+      </div>
+
+      <div class="fun-grid">
+        <div class="fun-card">
+          <h3>Current status</h3>
+          <p class="fun-status" id="statusText">
+            Loading vibe…
+          </p>
+          <button class="btn tiny" id="statusButton">
+            Roll new vibe 🎲
+          </button>
+        </div>
+
+        <div class="fun-card">
+          <h3>Random facts</h3>
+          <ul class="fun-list">
+            <li>✨ Knows exactly how many times Unity has crashed this week. (Too many.)</li>
+            <li>📚 Thinks “just one more tutorial” is a personality trait.</li>
+            <li>🎧 Productivity powered by questionable playlists.</li>
+          </ul>
+        </div>
+
+        <div class="fun-card">
+          <h3>What I’d love to work on next</h3>
+          <ul class="fun-list fun-list-pill">
+            <li>A tiny, polished commercial game</li>
+            <li>A weird arcade-y web toy</li>
+            <li>Stylised title sequence / intro animation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-contact" id="contact">
+      <div class="section-header">
+        <p class="section-kicker">Let’s build something</p>
+        <h2>Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>
+            Want a playful site, a prototype, or help on a game / creative
+            project? I’m open to freelance work, collaborations, and cool opportunities.
+          </p>
+          <p>
+            The best way to reach me is via email or GitHub. Carrier pigeons
+            are also acceptable, but have bad latency.
+          </p>
+
+          <div class="contact-links">
+            <!-- Replace with your real links -->
+            <a href="mailto:youremail@example.com" class="contact-link">
+              📧 youremail@example.com
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" class="contact-link">
+              🐙 github.com/yourusername
+            </a>
+            <a href="https://www.linkedin.com/in/your-link" target="_blank" rel="noreferrer" class="contact-link">
+              💼 LinkedIn profile
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="_replyto" required />
+          </label>
+          <label>
+            What are you thinking about?
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn primary full">
+            Send message ✉️
+          </button>
+          <p class="contact-note">
+            Form powered by Formspree (or swap in your own backend).
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Chris Ridley. Built with HTML, CSS, JS, and too much coffee.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
